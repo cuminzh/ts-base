@@ -52,6 +52,17 @@ var obj = { //传入的参数必须包含 firstName secondName
     firstName: '张',
     secondName: '三'
 };
-printName(obj);
+printName(obj); 
 */
 
+
+interface Config{
+    type:string;
+    url:string;
+    data?:string;
+    dataType: string;
+}
+//原生js封装ajax
+function ajax(){
+
+}
