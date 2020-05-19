@@ -173,19 +173,19 @@
 
 //private：私有 在类里面可以访问，子类、类外部都没法访问
 
-class Person{
-    private name:string; //公有属性
-    constructor(name:string){
-        this.name=name
-    }
-    run():string{
-        return `${this.name}在运动`
-    }
+// class Person{
+//     private name:string; //公有属性
+//     constructor(name:string){
+//         this.name=name
+//     }
+//     run():string{
+//         return `${this.name}在运动`
+//     }
 
-}
+// }
 
-var p=new Person('哈哈哈');
-alert(p.run());
+// var p=new Person('哈哈哈');
+// alert(p.run());
 
 // var p=new Person('哈哈哈')
 // alert(p.name)
