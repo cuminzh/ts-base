@@ -1,12 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="box">box </div>
 </body>
+<script>
+    // function Person() {
+    //     this.name = '张三';
+    //     this.age = 20;
+    //     this.run = function () {
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+    // var p = new Person()
+    // //  alert(p.name)
+    // // p.run()
+    // p.work()
+
+    //类里面的静态方法
+    // function Person() {
+    //     this.name = '张三';
+    //     this.age = 20;
+    //     this.run = function () {
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // Person.getInfo=function(){
+    //     alert('我是静态方法');
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+    // var p = new Person()
+    // //  alert(p.name)
+    // // p.run()
+    // p.work()
+    // //调用静态方法
+    // Person.getInfo()
+
+
+//es5继承 对象冒充实现继承
+    // function Person() {
+    //     this.name = '张三'; /*属性*/
+    //     this.age = 20;
+    //     this.run = function () { /*实例方法*/
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+
+    // //web类 继承Person类  原型链+对象冒充的组合继承模式
+    // function web(){
+    //     Person.call(this) /*对象冒充实现继承*/
+    // }
+
+    // var w=new web()
+    // w.run() //对象冒充可以继承构造函数里面的方法和属性
+    // w.work()  //对象冒充可以继承构造函数里面的方法和属性 但不 能继承原型链上的属性和方法
+
+
+    //es5继承 原型链实现继承
+    // function Person() {
+    //     this.name = '张三'; /*属性*/
+    //     this.age = 20;
+    //     this.run = function () { /*实例方法*/
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+
+    // //web类 继承Person类  原型链+对象冒充的组合继承模式
+    // function web(){
+        
+    // }
+    // web.prototype=new Person(); //原型链实现继承
+
+    // var w=new web()
+    // //原型链实现继承：可以继承构造函数的属性和方法，也可以继承原型链上的属性和方法
+    // // w.run()
+    // w.work()
+
+    //原型链实现继承的问题
+    // function Person(name, age) {
+    //     this.name = name; /*属性*/
+    //     this.age = age;
+    //     this.run = function () { /*实例方法*/
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+
+    // var p =new Person('李四', 20)
+    // p.run()
+
+    // function Person(name, age) {
+    //     this.name = name; /*属性*/
+    //     this.age = age;
+    //     this.run = function () { /*实例方法*/
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+
+    // function web(name, age) {
+
+    // }
+    // web.prototype=new Person();
+    // var w=new web('赵四', 20); //实例化子类时，没法给父类传参 
+    // w.run()
+
+
+    //原型链+构造函数的组合继承
+    // function Person(name, age) {
+    //     this.name = name; /*属性*/
+    //     this.age = age;
+    //     this.run = function () { /*实例方法*/
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+    // //原型链上的属性会被多个实例共享  构造函数不会
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+
+    // function web(name, age) {
+    //     Person.call(this, name,age) //对象冒充继承 实例化子类可以给父类传参
+    // }
+    // web.prototype=new Person();
+    // var w=new web('赵四', 20); //实例化子类时，没法给父类传参 
+    // // w.run()
+    // w.work()
+
+    //原型链+对象冒充另一种继承
+    // function Person(name, age) {
+    //     this.name = name; /*属性*/
+    //     this.age = age;
+    //     this.run = function () { /*实例方法*/
+    //         alert(this.name + '在运动')
+    //     }
+    // }
+
+    // Person.prototype.sex = "男";
+    // Person.prototype.work = function () {
+    //     alert(this.name + '在工作');
+    // }
+
+    // function web(name, age) {
+    //     Person.call(this, name,age) //对象冒充继承 可以继承构造函数里的属性和方法 实例化子类可以给父类传参
+    // }
+    // web.prototype=Person.prototype;
+    // var w=new web('赵四', 20); //实例化子类时，没法给父类传参 
+    // // w.run()
+    // w.work()
+</script>
 <script src="./js/index.js"></script>
+
 </html>
