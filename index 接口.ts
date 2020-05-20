@@ -196,7 +196,7 @@ c.eat('老鼠');
 // w.eat();
 
 
-
+/*
 interface Animal {
     eat(): void;
 }
@@ -234,3 +234,4 @@ var w = new Web('小强');
 w.work();
 w.eat();
 w.coding('写ts');
+*/
