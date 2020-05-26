@@ -9,10 +9,10 @@
 */
 
 
-import {A, B} from "./modules/animal"
+// import {A, B} from "./modules/animal"
 
-var d=new A.Dog('小狗');
-d.eat();
+// var d=new A.Dog('小狗');
+// d.eat();
 
-var c=new B.Cat('小猫');
-c.eat('玩耍');
+// var c=new B.Cat('小猫');
+// c.eat('玩耍');

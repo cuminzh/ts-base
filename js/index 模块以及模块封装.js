@@ -12,6 +12,5 @@
     export暴露模块里面的数据（变量、函数、类...)。
     暴露后我们通过import引入模块就可以使用模块里面暴露的数据（变量、函数、类...)。
 */
-Object.defineProperty(exports, "__esModule", { value: true });
-var db_1 = require("./modules/db");
-db_1.getData();
+// import {getData} from "./modules/db"
+// getData();
