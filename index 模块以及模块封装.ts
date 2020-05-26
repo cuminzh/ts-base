@@ -13,6 +13,13 @@
 */
 
 
-import {getData} from "./modules/db"
+import {getData as get, save} from "./modules/db"
 
-getData();
+get();
+
+save();
+
+
+// import getData from "./modules/db"
+
+// getData();
