@@ -1,23 +1,23 @@
-var dbUrl = ''
+// var dbUrl = ''
 
-function getData(): any[] {
-  console.log('获取数据库的数据');
-  return [
-    {
-      title: '123'
-    }
-  ]
-}
+// function getData(): any[] {
+//   console.log('获取数据库的数据');
+//   return [
+//     {
+//       title: '123'
+//     }
+//   ]
+// }
 
-function save() {
-  console.log('保存数据');
-}
+// function save() {
+//   console.log('保存数据');
+// }
 
-export {
-  dbUrl,
-  getData,
-  save
-}
+// export {
+//   dbUrl,
+//   getData,
+//   save
+// }
 
 /*
 export default 默认导出
