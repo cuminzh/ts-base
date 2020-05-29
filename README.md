@@ -13,3 +13,4 @@ ts基础
 
 ![image](https://github.com/cuminzh/ts-base/blob/master/img/WX20200527-162422.png)
 
+这时候终端就会运行，实现对ts的监听，从而转化为js代码，可以在js文件夹中找到对应的js文件，当修改ts文件时，相应的js文件也会修改
